@@ -91,7 +91,7 @@ function initializeOpenBooking() {
 
       let response;
       try {
-          response = await fetch('https://antohabeuty.store/api/api/books/slots/');
+          response = await fetch('https://bot2.antohabeuty.store/api/bot2/api/books/slots/');
           response = await response.json();
       } catch (err) {
           console.error('Ошибка получения слотов:', err);
@@ -167,4 +167,5 @@ function initializeOpenBooking() {
   });
 
   renderCalendar(currentDate);
+
 }
