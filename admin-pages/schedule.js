@@ -57,7 +57,7 @@ function initializeSchedule() {
     scheduleContainer.innerHTML = '<div class="loading">Загрузка расписания...</div>';
 
     try {
-      const response = await fetch('https://antohabeuty.store/api/api/books/slots/');
+      const response = await fetch('https://bot2.antohabeuty.store/api/bot2/api/books/slots/');
       const slots = await response.json();
 
       let scheduleHTML = '';
@@ -125,7 +125,7 @@ function initializeSchedule() {
 
   async function showAnamnesis(telegramId) {
     try {
-      const response = await fetch(`https://antohabeuty.store/api/api/anamnez/${telegramId}`);
+      const response = await fetch(`https://bot2.antohabeuty.store/api/bot2/api/anamnez/${telegramId}`);
       
       if (!response.ok) {
         throw new Error('Анамнез не найден');
@@ -249,4 +249,5 @@ function initializeSchedule() {
     currentWeek = getWeekDates(currentDate);
     renderWeekSchedule(currentWeek);
   });
+
 }
