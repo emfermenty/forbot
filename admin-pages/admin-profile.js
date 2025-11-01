@@ -38,7 +38,7 @@ function initializeAdminProfile() {
 
 async function loadStatistics() {
   try {
-    const response = await fetch('https://antohabeuty.store/api/api/books/slots/');
+    const response = await fetch('bot2.antohabeuty.store/api/bot2/api/books/slots/');
     const slots = await response.json();
     
     const today = new Date().toISOString().split('T')[0];
@@ -48,4 +48,5 @@ async function loadStatistics() {
   } catch (error) {
     console.error('Ошибка загрузки статистики:', error);
   }
+
 }
