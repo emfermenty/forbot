@@ -88,7 +88,7 @@ function initializeManagement() {
 
   async function loadCategories() {
     try {
-      const response = await fetch('https://antohabeuty.store/api/api/categories');
+      const response = await fetch('https://bot2.antohabeuty.store/api/bot2/api/categories');
       if (response.ok) {
         categories = await response.json();
       } else {
@@ -105,7 +105,7 @@ function initializeManagement() {
 
   async function loadServices(categoryId = null) {
     try {
-      let url = 'https://antohabeuty.store/api/api/services';
+      let url = 'https://bot2.antohabeuty.store/api/bot2/api/services';
       if (categoryId) {
         url += `/${categoryId}`;
       }
@@ -411,4 +411,5 @@ function initializeManagement() {
       document.getElementById('modalConfirm').disabled = true;
     }
   });
+
 }
